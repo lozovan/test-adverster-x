@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vitalii</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <button id="sound-btn" onclick="toggleSound()">
+        <img src="img/sound/sound-on.png" alt="Sound Icon" id="sound-icon">
+    </button>
+    <section class="slide active" id="slide-1">
+        <div class="slide-content">
+            <p>Stop spending time on mediocre online stuff!</p>
+            <h1 class="main-heading">Explore Our Intriguing<br> 3D Game</h1>
+            <span class="description">Instead and experience unparalleled pleasure like you've never seen before.</span>
+            <div class="button-group">
+                <button class="btn decline">No, thanks</button>
+                <button class="btn continue" onclick="nextStep(2)">Continue</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="slide-2">
+        <div class="slide-content">
+            <h2>Who Would You Choose As Your First Partner?</h2>
+            <div class="slider-container-2">
+                <button class="slider-btn left" onclick="prevSlide()">&#9664;</button>
+                <img src="character-1.png" alt="Step-Sister" class="slider-image" id="current-character">
+                <button class="slider-btn right" onclick="nextCharacter()">&#9654;</button>
+            </div>
+            <p id="character-name">Step-Sister</p>
+            <div class="button-group">
+                <button class="btn" onclick="nextStep(3)">Next</button>
+            </div>
+        </div>
+    </section>
+    <section class="slide" id="slide-3">
+        <div class="slide-content">
+            <h2>Warning</h2>
+            <span class="description">You must be at least 18 years old and comfortable with mature topics to play the game.</span>
+            <div class="button-group">
+                <button class="btn continue" onclick="nextStep(1)">ok, Continue</button>
+            </div>
+        </div>
+    </section>
+
+    </script>
+    <script src="js/slider.js"></script>
+    <script src="/js/sound.js"></script>
+</body>
+
+</html>

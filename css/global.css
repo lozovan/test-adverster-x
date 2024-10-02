@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Nirmala UI', sans-serif;
+    background: url(../img/background.png) no-repeat;
+    background-size: cover;
+    background-position: inherit;
+}
+
+.slide {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    display: none;
+}
+
+.slide.active {
+    display: flex;
+}
+
+
+.button-group {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.btn {
+    border-radius: 10px;
+    border: none;
+    font-family: 'Nirmala UI';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
