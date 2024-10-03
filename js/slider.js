@@ -15,6 +15,34 @@ function nextStep(slideNumber) {
     }
 }
 
+function loadImage(url) {
+    return fetch(url, { method: 'GET', cache: 'no-cache' })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.blob(); // Повертає blob-об'єкт
+        })
+        .then(blob => {
+            const imgUrl = URL.createObjectURL(blob);
+            return imgUrl; // Повертає новий URL
+        });
+}
+
+function loadImage(url) {
+    return fetch(url, { method: 'GET', cache: 'no-cache' })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.blob(); // Повертає blob-об'єкт
+        })
+        .then(blob => {
+            const imgUrl = URL.createObjectURL(blob);
+            return imgUrl; // Повертає новий URL
+        });
+}
+
 function updateBackgrounds(slideNumber) {
     const slides = document.querySelectorAll('.slide');
 
@@ -23,18 +51,27 @@ function updateBackgrounds(slideNumber) {
         slide.style.setProperty('--background-right', 'none');
     });
 
+    let leftImageUrl, rightImageUrl;
+
     switch (slideNumber) {
         case 1:
-            slides[0].style.setProperty('--background-left', 'url(../img/girls/girl-slide1-l.svg)');
-            slides[0].style.setProperty('--background-right', 'url(../img/girls/girl-slide1-r.svg)');
+            leftImageUrl = '../img/girls/girl-slide1-l.svg';
+            rightImageUrl = '../img/girls/girl-slide1-r.svg';
             break;
         case 3:
-            slides[2].style.setProperty('--background-left', 'url(../img/girls/girl-slide3left.svg)');
-            slides[2].style.setProperty('--background-right', 'url(../img/girls/girl-slide3right.svg)');
+            leftImageUrl = '../img/girls/girl-slide3left.svg';
+            rightImageUrl = '../img/girls/girl-slide3right.svg';
             break;
-        // Якщо у вас з'являться інші слайди, ви можете додати їх сюди.
         default:
             console.warn('Невідомий номер слайду: ' + slideNumber);
-            break;
+            return; // Вихід, якщо номер слайду невідомий
     }
+
+    loadImage(leftImageUrl).then(leftImgUrl => {
+        slides[slideNumber - 1].style.setProperty('--background-left', `url(${leftImgUrl})`);
+    });
+
+    loadImage(rightImageUrl).then(rightImgUrl => {
+        slides[slideNumber - 1].style.setProperty('--background-right', `url(${rightImgUrl})`);
+    });
 }

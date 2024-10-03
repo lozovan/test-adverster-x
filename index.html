@@ -15,7 +15,7 @@
     <section class="slide active" id="slide-1">
         <div class="slide-content">
             <p>Stop spending time on mediocre online stuff!</p>
-            <h1 class="main-heading">Explore Our Intriguing<br> 3D Game</h1>
+            <h1>Explore Our Intriguing<br> 3D Game</h1>
             <span class="description">Instead and experience unparalleled pleasure like you've never seen before.</span>
             <div class="button-group">
                 <button class="btn decline">No, thanks</button>
@@ -26,22 +26,29 @@
 
     <section class="slide" id="slide-2">
         <div class="slide-content">
-            <h2>Who Would You Choose As Your First Partner?</h2>
+            <h3>Who Would You Choose as Your First Partner, if you play right now?</h3>
             <div class="slider-container-2">
-                <button class="slider-btn left" onclick="prevSlide()">&#9664;</button>
-                <img src="character-1.png" alt="Step-Sister" class="slider-image" id="current-character">
-                <button class="slider-btn right" onclick="nextCharacter()">&#9654;</button>
+                <button class="slider-btn left" onclick="prevCharacter()">&#9664;</button>
+                <div class="slider-wrapper" id="slider-wrapper">
+                    <img src="img/slide-section/sister.svg" alt="Step-Sister" class="slider-image" id="current-character">
+                    <p class="character-name-slider" id="character-name">Step-Sister</p>
+                </div>
+                <button class="slider-btn right" onclick="nextCharacter()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" width="134" height="88" viewBox="0 0 134 88" fill="none">
+                        <circle cx="90" cy="44" r="44" transform="rotate(180 90 44)" fill="currentColor" />
+                        <path d="M93.0607 45.0607C93.6464 44.4749 93.6464 43.5251 93.0607 42.9393L83.5147 33.3934C82.9289 32.8076 81.9792 32.8076 81.3934 33.3934C80.8076 33.9792 80.8076 34.9289 81.3934 35.5147L89.8787 44L81.3934 52.4853C80.8076 53.0711 80.8076 54.0208 81.3934 54.6066C81.9792 55.1924 82.9289 55.1924 83.5147 54.6066L93.0607 45.0607ZM0 45.5L92 45.5V42.5L0 42.5L0 45.5Z" fill="white" />
+                      </svg>   
+                </button>
             </div>
-            <p id="character-name">Step-Sister</p>
             <div class="button-group">
-                <button class="btn" onclick="nextStep(3)">Next</button>
+                <button class="btn next" onclick="nextStep(3)">Next</button>
             </div>
         </div>
     </section>
     <section class="slide" id="slide-3">
         <div class="slide-content">
             <h2>Warning</h2>
-            <span class="description">You must be at least 18 years old and comfortable with mature topics to play the game.</span>
+            <span class="info__text">You must be at least 18 years old and comfortable with mature topics to play the game.</span>
             <div class="button-group">
                 <button class="btn continue" onclick="nextStep(1)">ok, Continue</button>
             </div>
@@ -50,6 +57,7 @@
 
     </script>
     <script src="js/slider.js"></script>
+    <script src="js/slider-content-2.js"></script>
     <script src="/js/sound.js"></script>
 </body>
 
