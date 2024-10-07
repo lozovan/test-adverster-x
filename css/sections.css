@@ -150,6 +150,7 @@
     justify-content: center;
     position: relative;
     max-width: 100%;
+    gap: 250px;
 }
 
 .slider-wrapper {
@@ -168,8 +169,6 @@
 }
 
 .slider-image {
-    /* max-width: 100%;
-    max-height: 80%; */
     width: 321px;
     height: 374px;
     object-fit: cover;
@@ -178,28 +177,43 @@
 
 }
 
-/* .slider-btn {
-    background-color: orange;
+.slider-btn {
+    background: none;
     border: none;
-    color: white;
-    font-size: 2rem;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+    padding: 0;
+    outline: none;
+    position: relative;
 }
 
-.slider-btn:hover {
-    background-color: darkorange;
-} */
+.slider-btn.left {
+    transform: rotate(-180deg);
+}
+
+.arrow-circle {
+    width: 88px; /* Ширина кола */
+    height: 88px; /* Висота кола */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #FFE53B, #FF2525); /* Градієнт */
+    border-radius: 50%; /* Робимо коло */
+    transition: background 0.3s ease;
+    position: relative; /* Позиціонування для стрілки */
+    overflow: visible; /* Дозволяє стрілці виходити за межі кола */
+}
+
+.arrow-circle:hover {
+    box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.40) inset;
+}
+
 .arrow-icon {
-    color: linear-gradient(90deg, #FFE53B, #FF2525); /* Стандартний градієнт для кнопки */
-    transition: color 0.3s ease; /* Анімація для плавної зміни кольору */
-  }
-  
-  .arrow-icon:hover {
-    color: linear-gradient(90deg, #FF2525, #FFE53B); /* Градієнт на hover */
-  }
+    width: 120px; /* Стрілка виходить за межі кола */
+    height: 85px;
+    position: absolute; /* Абсолютне позиціонування, щоб стрілка виходила за межі кола */
+    top: 0px; /* Встановлюємо вихід стрілки зверху */
+    left: -40px; /* Встановлюємо вихід стрілки зліва */
+}
 
 #character-name {
     margin: 0px 0px 30px 0px;
