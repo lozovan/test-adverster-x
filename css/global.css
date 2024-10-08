@@ -5,6 +5,19 @@
 
 }
 
+:root {
+    --background-left-slide1: url(../img/girls/girl-slide1-l.svg);
+    --background-right-slide1: url(../img/girls/girl-slide1-r.svg);
+    
+    --background-left-slide3: url(../img/girls/girl-slide3left.svg);
+    --background-right-slide3: url(../img/girls/girl-slide3right.svg);
+     
+    --background-size-left-slide3: 51%;
+    --background-position-left-slide3: 13% 105%;
+    --background-size-right-slide3: 52%;
+    --background-position-right-slide3: 90% 105%;
+}
+
 body {
     font-family: 'Nirmala UI', sans-serif;
     background: url(../img/background.png) no-repeat;

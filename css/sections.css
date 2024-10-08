@@ -1,6 +1,6 @@
 .slide.active#slide-1::before {
     content: '';
-    background: url(../img/girls/girl-slide1-l.svg) no-repeat;
+    background: var(--background-left-slide1) no-repeat;
     background-size: 52%;
     background-position: 20% 120%;
     position: absolute;
@@ -13,7 +13,7 @@
 
 .slide.active#slide-1::after {
     content: '';
-    background: url(../img/girls/girl-slide1-r.svg) no-repeat;
+    background: var(--background-right-slide1) no-repeat;
     background-size: 61%;
     background-position: 90% 100%;
     position: absolute;
@@ -191,16 +191,16 @@
 }
 
 .arrow-circle {
-    width: 88px; /* Ширина кола */
-    height: 88px; /* Висота кола */
+    width: 88px;
+    height: 88px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #FFE53B, #FF2525); /* Градієнт */
-    border-radius: 50%; /* Робимо коло */
+    background: linear-gradient(90deg, #FFE53B, #FF2525);
+    border-radius: 50%;
     transition: background 0.3s ease;
-    position: relative; /* Позиціонування для стрілки */
-    overflow: visible; /* Дозволяє стрілці виходити за межі кола */
+    position: relative;
+    overflow: visible;
 }
 
 .arrow-circle:hover {
@@ -208,11 +208,11 @@
 }
 
 .arrow-icon {
-    width: 120px; /* Стрілка виходить за межі кола */
+    width: 120px;
     height: 85px;
-    position: absolute; /* Абсолютне позиціонування, щоб стрілка виходила за межі кола */
-    top: 0px; /* Встановлюємо вихід стрілки зверху */
-    left: -40px; /* Встановлюємо вихід стрілки зліва */
+    position: absolute;
+    top: 0px;
+    left: -40px;
 }
 
 #character-name {
@@ -248,9 +248,9 @@
 
 .slide.active#slide-3::before {
     content: '';
-    background: url(../img/girls/girl-slide3left.svg) no-repeat;
-    background-size: 52%;
-    background-position: 20% 120%;
+    background: var(--background-left-slide3) no-repeat;
+    background-size: var(--background-size-left-slide3);
+    background-position: var(--background-position-left-slide3);
     position: absolute;
     left: 0;
     top: 0;
@@ -261,9 +261,9 @@
 
 .slide.active#slide-3::after {
     content: '';
-    background: url(../img/girls/girl-slide3right.svg) no-repeat;
-    background-size: 61%;
-    background-position: 90% 100%;
+    background: var(--background-right-slide3) no-repeat;
+    background-size: var(--background-size-right-slide3);
+    background-position: var(--background-position-right-slide3);
     position: absolute;
     right: 0;
     top: 0;
@@ -280,7 +280,6 @@
     line-height: 44.8px;
     color: #ffffff;
     font-style: normal;
-    text-transform: uppercase;
-    max-width: 60%;
+    max-width: 70%;
     padding: 40px 0px 120px 0px;
 }
