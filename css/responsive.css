@@ -1,0 +1,189 @@
+/* Мобільні пристрої (320px до 480px) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    body { 
+        background-size: cover;
+        background-position: center center;
+    }
+    #sound-btn img {
+        width: 30px;
+        height: 30px;
+    }
+    #sound-btn {
+        top: 30px;
+        right: 11px;
+    }    
+    .slide{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .slide.active#slide-1::before{
+        display: none;
+    }
+    .slide.active#slide-1::after {
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 0;
+        margin: auto;
+    }    
+    .slide-content h1 {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 10px 16px 0px 16px;
+        -webkit-text-stroke: 0.2px #ffffff;
+    }
+    .button-group{
+        flex-direction: column;
+        gap: 10px;
+        max-width: 92%;
+        margin: auto;
+    }
+    .btn {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .decline {
+        padding: 16px 66px;
+        order: 2;
+    }
+    .continue {
+        padding: 16px 79.5px;
+        display: flex;
+        order: 1;
+    }        
+    .slide-content p {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 5px 6.5px 6px 0.5px;
+        margin: 20px 51px 0px 51px;
+    }
+    .description {
+        font-size: 12px;
+        line-height: 14.4px;
+        letter-spacing: 3px;
+        padding: 20px 0px 0px 0px;
+        max-width: 90%;
+    }    
+    .slider-wrapper {
+        width: 280px;
+    }
+    .slider-image {
+        width: 150px;
+        height: 180px;
+    }
+    .arrow-circle {
+        width: 40px;
+        height: 40px;
+    }
+    .arrow-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .next {
+        padding: 10px 80px;
+        font-size: 16px;
+    }
+}
+
+/* Мобільні пристрої та невеликі планшети (481px до 767px) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .slide-content h1 {
+        font-size: 36px;
+        line-height: 48px;
+        margin: 15px 20px;
+    }
+    .slide-content h2 {
+        font-size: 40px;
+        line-height: 50px;
+        margin: 80px 0px 0px 0px;
+    }
+    .slider-wrapper {
+        width: 320px;
+    }
+    .slider-image {
+        width: 200px;
+        height: 240px;
+    }
+    .arrow-circle {
+        width: 50px;
+        height: 50px;
+    }
+    .arrow-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .next {
+        padding: 12px 90px;
+        font-size: 18px;
+    }
+}
+
+/* Планшети (768px до 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .slide-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+        margin: 20px 30px;
+    }
+    .slide-content h2 {
+        font-size: 48px;
+        line-height: 60px;
+        margin: 100px 0px 0px 0px;
+    }
+    .slider-wrapper {
+        width: 400px;
+    }
+    .slider-image {
+        width: 250px;
+        height: 300px;
+    }
+    .arrow-circle {
+        width: 60px;
+        height: 60px;
+    }
+    .arrow-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .next {
+        padding: 15px 100px;
+        font-size: 20px;
+    }
+}
+
+/* Маленькі десктопи та планшети (1025px до 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .slide-content h1 {
+        font-size: 48px;
+        line-height: 60px;
+        margin: 25px 35px;
+    }
+    .slide-content h2 {
+        font-size: 56px;
+        line-height: 70px;
+        margin: 120px 0px 0px 0px;
+    }
+    .slider-wrapper {
+        width: 500px;
+    }
+    .slider-image {
+        width: 300px;
+        height: 350px;
+    }
+    .arrow-circle {
+        width: 70px;
+        height: 70px;
+    }
+    .arrow-icon {
+        width: 45px;
+        height: 45px;
+    }
+    .next {
+        padding: 18px 110px;
+        font-size: 22px;
+    }
+}
