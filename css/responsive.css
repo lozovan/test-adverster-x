@@ -4,6 +4,10 @@
         background-size: cover;
         background-position: center center;
     }
+    :root {
+        --background-size-left-slide3: 80%;
+        --background-position-left-slide3: 30% 100%;
+    }
     #sound-btn img {
         width: 30px;
         height: 30px;
@@ -15,27 +19,50 @@
     .slide{
       flex-direction: column;
       justify-content: flex-start;
+      height: auto;
     }
     .slide.active#slide-1::before{
         display: none;
     }
     .slide.active#slide-1::after {
-        background-size: cover;
-        background-position: center center;
+        background-size: contain;
+        background-position: 50%  50%!important;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 30%!important;
         bottom: 0;
-        width: 100%;
+        width: 120%!important;
         z-index: 0;
         margin: auto;
     }    
     .slide-content h1 {
         font-size: 22px;
         line-height: 28px;
-        margin: 10px 16px 0px 16px;
+        margin: 20px 0px 20px 0px;
         -webkit-text-stroke: 0.2px #ffffff;
     }
+    .slide-content h3 {
+        font-size: 24px;
+        line-height: 28px;
+        margin: 20px 0px 20px 0px;
+        -webkit-text-stroke: 0.2px #ffffff;
+        max-width: 85%;
+    }  
+    .slide-content h2 {
+        font-size: 48px;
+        line-height: 44px;
+        margin: 20px 15px 0px 0px;
+        -webkit-text-stroke: 0.2px #ffffff;
+    }  
+    .slider-container-2{
+        gap: 15px;
+    }  
+    .info__text {
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 95%;
+        padding: 10px 0px 300px 0px;
+    }    
     .button-group{
         flex-direction: column;
         gap: 10px;
@@ -65,28 +92,49 @@
         font-size: 12px;
         line-height: 14.4px;
         letter-spacing: 3px;
-        padding: 20px 0px 0px 0px;
+        padding: 20px 0px 210px 0px;
         max-width: 90%;
     }    
     .slider-wrapper {
-        width: 280px;
+        width: 200px;
+        margin: 25px 0px 30px 0px;
     }
     .slider-image {
         width: 150px;
         height: 180px;
+        margin: 15px 65px 5px 65px;
     }
     .arrow-circle {
         width: 40px;
         height: 40px;
     }
     .arrow-icon {
-        width: 30px;
+        width: 40px;
         height: 30px;
+        top: 5px;
+        left: -10px;
+    }
+    #character-name {
+        margin: 0px 0px 15px 0px;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 24.4px;
     }
     .next {
-        padding: 10px 80px;
-        font-size: 16px;
+        padding: 15px 80px;
     }
+    .slide.active#slide-3::before {     
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 0;
+    }    
+    .slide.active#slide-3::after{
+        display: none;
+    }
+
 }
 
 /* Мобільні пристрої та невеликі планшети (481px до 767px) */
